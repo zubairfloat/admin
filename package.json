@@ -3,6 +3,9 @@
     "version": "7.0.6",
     "private": true,
     "homepage": "/metronic/react/demo1",
+    "engines": {
+        "node": "10.16.3"
+    },
     "scripts": {
         "start": "react-scripts start -o",
         "build": "react-scripts build",
