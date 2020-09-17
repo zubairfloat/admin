@@ -30,7 +30,7 @@ export function Demo1Dashboard() {
                 <ListsWidget1 className="card-stretch gutter-b" />
             </div>
             <div className="col-xxl-8 order-2 order-xxl-1">
-                <AdvanceTablesWidget2 className="card-stretch gutter-b" />
+                <AdvanceTablesWidget4 className="card-stretch gutter-b" />
             </div>
             <div className="col-lg-6 col-xxl-4 order-1 order-xxl-2">
                 <ListsWidget3 className="card-stretch gutter-b" />

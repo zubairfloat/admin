@@ -40,6 +40,7 @@ export function MetronicSplashScreenProvider({ children }) {
 
 export function LayoutSplashScreen({ visible = true }) {
   // Everything are ready - remove splashscreen
+  console.log("splash")
   const setCount = useContext(MetronicSplashScreenContext);
 
   useEffect(() => {

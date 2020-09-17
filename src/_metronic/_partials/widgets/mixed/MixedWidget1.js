@@ -9,7 +9,7 @@ import { toAbsoluteUrl } from "../../../_helpers";
 import { useHtmlClassService } from "../../../layout";
 import { DropdownMenu2 } from "../../dropdowns";
 
-export function MixedWidget1({ className, displayShipemt, displayUser, displayCourier }) {
+export function MixedWidget1({ className, displayShipemt, displayUser, displayCourier, displayStats }) {
   const uiService = useHtmlClassService();
   const layoutProps = useMemo(() => {
     return {
@@ -91,7 +91,7 @@ export function MixedWidget1({ className, displayShipemt, displayUser, displayCo
             </div>
           </div>
           <div className="row m-0">
-            <div onClick={displayCourier} style={{ cursor: "pointer" }} className="col bg-light-danger px-6 py-8 rounded-xl mr-7">
+            <div onClick={displayCourier} style={{ cursor: "pointer" }} className="col bg-light-danger px-6 py-8 rounded-xl mr-7 mb-7">
               <span className="svg-icon svg-icon-3x svg-icon-danger d-block my-2">
                 <SVG
                   src={toAbsoluteUrl("/media/svg/icons/Design/Layers.svg")}
@@ -102,6 +102,19 @@ export function MixedWidget1({ className, displayShipemt, displayUser, displayCo
                 className="text-danger font-weight-bold font-size-h6 mt-2"
               >
                 Couriers
+              </a>
+            </div>
+            <div onClick={displayStats} style={{ cursor: "pointer" }} className="col bg-light-danger px-6 py-8 rounded-xl mb-7">
+              <span className="svg-icon svg-icon-3x svg-icon-danger d-block my-2">
+                <SVG
+                  src={toAbsoluteUrl("/media/svg/icons/Media/Equalizer.svg")}
+                ></SVG>
+              </span>
+              <a
+                href="#"
+                className="text-primary font-weight-bold font-size-h6 mt-2"
+              >
+                Stats
               </a>
             </div>
           </div>

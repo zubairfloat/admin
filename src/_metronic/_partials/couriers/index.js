@@ -1,11 +1,17 @@
 import React, { Component } from 'react'
+import CouriersTable from './table'
 
-class Courier extends Component {
+class Sender extends Component {
     render() {
         return (
-            <h1>Couriers Data.................</h1>
+            <div className="row">
+                <div className="col-xxl-12 order-2 order-xxl-1">
+                    <CouriersTable className="card-stretch gutter-b" />
+                </div>
+            </div>
+
         )
     }
 }
 
-export default Courier
+export default Sender

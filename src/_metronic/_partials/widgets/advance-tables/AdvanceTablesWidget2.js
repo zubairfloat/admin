@@ -1,8 +1,8 @@
 /* eslint-disable no-script-url,jsx-a11y/anchor-is-valid */
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Nav, Tab } from "react-bootstrap";
 import SVG from "react-inlinesvg";
-import {toAbsoluteUrl} from "../../../_helpers";
+import { toAbsoluteUrl } from "../../../_helpers";
 
 export function AdvanceTablesWidget2({ className }) {
   const [key, setKey] = useState("Month");
@@ -19,46 +19,6 @@ export function AdvanceTablesWidget2({ className }) {
             More than 400+ new members
           </span>
         </h3>
-        <div className="card-toolbar">
-          <Tab.Container defaultActiveKey={key}>
-            <Nav
-              as="ul"
-              onSelect={_key => setKey(_key)}
-              className="nav nav-pills nav-pills-sm nav-dark-75"
-            >
-              <Nav.Item className="nav-item" as="li">
-                <Nav.Link
-                  eventKey="Month"
-                  className={`nav-link py-2 px-4 ${
-                    key === "Month" ? "active" : ""
-                  }`}
-                >
-                  Month
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item className="nav-item" as="li">
-                <Nav.Link
-                  eventKey="Week"
-                  className={`nav-link py-2 px-4 ${
-                    key === "Week" ? "active" : ""
-                  }`}
-                >
-                  Week
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item className="nav-item" as="li">
-                <Nav.Link
-                  eventKey="Day"
-                  className={`nav-link py-2 px-4 ${
-                    key === "Day" ? "active" : ""
-                  }`}
-                >
-                  Day
-                </Nav.Link>
-              </Nav.Item>
-            </Nav>
-          </Tab.Container>
-        </div>
       </div>
       {/* Body */}
       <div className="card-body pt-3 pb-0">
@@ -91,7 +51,7 @@ export function AdvanceTablesWidget2({ className }) {
                     href="#"
                     className="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                   >
-                    Sant Outstanding
+                    User 1
                   </a>
                   <div>
                     <span className="font-weight-bolder">Email:</span>{" "}
@@ -99,20 +59,21 @@ export function AdvanceTablesWidget2({ className }) {
                       className="text-muted font-weight-bold text-hover-primary"
                       href="#"
                     >
-                      bprow@bnc.cc
+                      User@gmail.com
                     </a>
                   </div>
                 </td>
                 <td className="text-right">
                   <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
-                    $2,000,000
+                    Phone Number
                   </span>
-                  <span className="text-muted font-weight-bold">Paid</span>
+                  <span className="text-muted font-weight-bold">+92323*****22</span>
                 </td>
                 <td className="text-right">
-                  <span className="text-muted font-weight-500">
-                    ReactJs, HTML
+                  <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
+                    Account Type
                   </span>
+                  <span className="text-muted font-weight-bold">Sender</span>
                 </td>
                 <td className="text-right">
                   <span className="label label-lg label-light-primary label-inline">
@@ -120,15 +81,6 @@ export function AdvanceTablesWidget2({ className }) {
                   </span>
                 </td>
                 <td className="text-right pr-0">
-                  <a href="#" className="btn btn-icon btn-light btn-sm">
-                    <span className="svg-icon svg-icon-md svg-icon-primary">
-                      <SVG
-                        src={toAbsoluteUrl(
-                          "/media/svg/icons/General/Settings-1.svg"
-                        )}
-                      ></SVG>
-                    </span>
-                  </a>
                   <a href="#" className="btn btn-icon btn-light btn-sm mx-3">
                     <span className="svg-icon svg-icon-md svg-icon-primary">
                       <SVG
@@ -151,11 +103,11 @@ export function AdvanceTablesWidget2({ className }) {
               </tr>
               <tr>
                 <td className="pl-0 py-4">
-                  <div className="symbol symbol-50 symbol-light">
+                  <div className="symbol symbol-50 symbol-light mr-1">
                     <span className="symbol-label">
                       <SVG
+                        src={toAbsoluteUrl("/media/svg/misc/006-plurk.svg")}
                         className="h-50 align-self-center"
-                        src={toAbsoluteUrl("/media/svg/misc/015-telegram.svg")}
                       ></SVG>
                     </span>
                   </div>
@@ -165,7 +117,7 @@ export function AdvanceTablesWidget2({ className }) {
                     href="#"
                     className="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                   >
-                    Application Development
+                    User 1
                   </a>
                   <div>
                     <span className="font-weight-bolder">Email:</span>{" "}
@@ -173,36 +125,28 @@ export function AdvanceTablesWidget2({ className }) {
                       className="text-muted font-weight-bold text-hover-primary"
                       href="#"
                     >
-                      app@dev.com
+                      User@gmail.com
                     </a>
                   </div>
                 </td>
                 <td className="text-right">
                   <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
-                    $4,600,000
+                    Phone Number
                   </span>
-                  <span className="text-muted font-weight-bold">Paid</span>
+                  <span className="text-muted font-weight-bold">+92323*****22</span>
                 </td>
                 <td className="text-right">
-                  <span className="text-muted font-weight-500">
-                    Python, MySQL
+                  <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
+                    Account Type
                   </span>
+                  <span className="text-muted font-weight-bold">Sender</span>
                 </td>
                 <td className="text-right">
-                  <span className="label label-lg label-light-warning label-inline">
-                    In Progress
+                  <span className="label label-lg label-light-primary label-inline">
+                    Approved
                   </span>
                 </td>
                 <td className="text-right pr-0">
-                  <a href="#" className="btn btn-icon btn-light btn-sm">
-                    <span className="svg-icon svg-icon-md svg-icon-primary">
-                      <SVG
-                        src={toAbsoluteUrl(
-                          "/media/svg/icons/General/Settings-1.svg"
-                        )}
-                      ></SVG>
-                    </span>
-                  </a>
                   <a href="#" className="btn btn-icon btn-light btn-sm mx-3">
                     <span className="svg-icon svg-icon-md svg-icon-primary">
                       <SVG
@@ -225,11 +169,11 @@ export function AdvanceTablesWidget2({ className }) {
               </tr>
               <tr>
                 <td className="pl-0 py-4">
-                  <div className="symbol symbol-50 symbol-light">
+                  <div className="symbol symbol-50 symbol-light mr-1">
                     <span className="symbol-label">
                       <SVG
+                        src={toAbsoluteUrl("/media/svg/misc/006-plurk.svg")}
                         className="h-50 align-self-center"
-                        src={toAbsoluteUrl("/media/svg/misc/003-puzzle.svg")}
                       ></SVG>
                     </span>
                   </div>
@@ -239,7 +183,7 @@ export function AdvanceTablesWidget2({ className }) {
                     href="#"
                     className="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                   >
-                    Payrol Application
+                    User 1
                   </a>
                   <div>
                     <span className="font-weight-bolder">Email:</span>{" "}
@@ -247,186 +191,28 @@ export function AdvanceTablesWidget2({ className }) {
                       className="text-muted font-weight-bold text-hover-primary"
                       href="#"
                     >
-                      company@dev.com
+                      User@gmail.com
                     </a>
                   </div>
                 </td>
                 <td className="text-right">
                   <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
-                    $560,000
+                    Phone Number
                   </span>
-                  <span className="text-muted font-weight-bold">Paid</span>
-                </td>
-                <td className="text-right">
-                  <span className="text-muted font-weight-500">
-                    Laravel, Metronic
-                  </span>
-                </td>
-                <td className="text-right">
-                  <span className="label label-lg label-light-success label-inline">
-                    Success
-                  </span>
-                </td>
-                <td className="text-right pr-0">
-                  <a href="#" className="btn btn-icon btn-light btn-sm">
-                    <span className="svg-icon svg-icon-md svg-icon-primary">
-                      <SVG
-                        src={toAbsoluteUrl(
-                          "/media/svg/icons/General/Settings-1.svg"
-                        )}
-                      ></SVG>
-                    </span>
-                  </a>
-                  <a href="#" className="btn btn-icon btn-light btn-sm mx-3">
-                    <span className="svg-icon svg-icon-md svg-icon-primary">
-                      <SVG
-                        src={toAbsoluteUrl(
-                          "/media/svg/icons/Communication/Write.svg"
-                        )}
-                      ></SVG>
-                    </span>
-                  </a>
-                  <a href="#" className="btn btn-icon btn-light btn-sm">
-                    <span className="svg-icon svg-icon-md svg-icon-primary">
-                      <SVG
-                        src={toAbsoluteUrl(
-                          "/media/svg/icons/General/Trash.svg"
-                        )}
-                      ></SVG>
-                    </span>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td className="pl-0 py-4">
-                  <div className="symbol symbol-50 symbol-light">
-                    <span className="symbol-label">
-                      <SVG
-                        className="h-50 align-self-center"
-                        src={toAbsoluteUrl("/media/svg/misc/005-bebo.svg")}
-                      ></SVG>
-                    </span>
-                  </div>
-                </td>
-                <td className="pl-0">
-                  <a
-                    href="#"
-                    className="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                  >
-                    HR Management System
-                  </a>
-                  <div>
-                    <span className="font-weight-bolder">Email:</span>{" "}
-                    <a
-                      className="text-muted font-weight-bold text-hover-primary"
-                      href="#"
-                    >
-                      hr@demo.com
-                    </a>
-                  </div>
+                  <span className="text-muted font-weight-bold">+92323*****22</span>
                 </td>
                 <td className="text-right">
                   <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
-                    $57,000
+                    Account Type
                   </span>
-                  <span className="text-muted font-weight-bold">Paid</span>
+                  <span className="text-muted font-weight-bold">Sender</span>
                 </td>
                 <td className="text-right">
-                  <span className="text-muted font-weight-bold">
-                    AngularJS, C#
-                  </span>
-                </td>
-                <td className="text-right">
-                  <span className="label label-lg label-light-danger label-inline">
-                    Rejected
+                  <span className="label label-lg label-light-primary label-inline">
+                    Approved
                   </span>
                 </td>
                 <td className="text-right pr-0">
-                  <a href="#" className="btn btn-icon btn-light btn-sm">
-                    <span className="svg-icon svg-icon-md svg-icon-primary">
-                      <SVG
-                        src={toAbsoluteUrl(
-                          "/media/svg/icons/General/Settings-1.svg"
-                        )}
-                      ></SVG>
-                    </span>
-                  </a>
-                  <a href="#" className="btn btn-icon btn-light btn-sm mx-3">
-                    <span className="svg-icon svg-icon-md svg-icon-primary">
-                      <SVG
-                        src={toAbsoluteUrl(
-                          "/media/svg/icons/Communication/Write.svg"
-                        )}
-                      ></SVG>
-                    </span>
-                  </a>
-                  <a href="#" className="btn btn-icon btn-light btn-sm">
-                    <span className="svg-icon svg-icon-md svg-icon-primary">
-                      <SVG
-                        src={toAbsoluteUrl(
-                          "/media/svg/icons/General/Trash.svg"
-                        )}
-                      ></SVG>
-                    </span>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td className="pl-0 py-4">
-                  <div className="symbol symbol-50 symbol-light">
-                    <span className="symbol-label">
-                      <SVG
-                        className="h-50 align-self-center"
-                        src={toAbsoluteUrl(
-                          "/media/svg/misc/014-kickstarter.svg"
-                        )}
-                      ></SVG>
-                    </span>
-                  </div>
-                </td>
-                <td className="pl-0">
-                  <a
-                    href="#"
-                    className="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                  >
-                    KTR Mobile Application
-                  </a>
-                  <div>
-                    <span className="font-weight-bolder">Email:</span>{" "}
-                    <a
-                      className="text-muted font-weight-bold text-hover-primary"
-                      href="#"
-                    >
-                      ktr@demo.com
-                    </a>
-                  </div>
-                </td>
-                <td className="text-right">
-                  <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
-                    $45,200,000
-                  </span>
-                  <span className="text-muted font-weight-bold">Paid</span>
-                </td>
-                <td className="text-right">
-                  <span className="text-muted font-weight-500">
-                    ReactJS, Ruby
-                  </span>
-                </td>
-                <td className="text-right">
-                  <span className="label label-lg label-light-warning label-inline">
-                    In Progress
-                  </span>
-                </td>
-                <td className="text-right pr-0">
-                  <a href="#" className="btn btn-icon btn-light btn-sm">
-                    <span className="svg-icon svg-icon-md svg-icon-primary">
-                      <SVG
-                        src={toAbsoluteUrl(
-                          "/media/svg/icons/General/Settings-1.svg"
-                        )}
-                      ></SVG>
-                    </span>
-                  </a>
                   <a href="#" className="btn btn-icon btn-light btn-sm mx-3">
                     <span className="svg-icon svg-icon-md svg-icon-primary">
                       <SVG

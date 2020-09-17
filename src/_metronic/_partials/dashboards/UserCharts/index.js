@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Chart from "react-apexcharts";
+import { connect } from 'react-redux'
 
 const ApexCharts = window.ApexCharts;
 
@@ -72,4 +73,10 @@ class UserChart extends Component {
     }
 }
 
-export default UserChart;
+const mapStateToProps = (state) => {
+    return {
+        data: state.user.user
+
+    }
+}
+export default connect(mapStateToProps, null)(UserChart);

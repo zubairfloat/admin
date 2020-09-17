@@ -1,5 +1,5 @@
 import React from "react";
-import {createMuiTheme, ThemeProvider} from "@material-ui/core";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 
 const theme = createMuiTheme(
   /**
@@ -51,6 +51,7 @@ const theme = createMuiTheme(
 );
 
 export function MaterialThemeProvider(props) {
+  console.log("theme")
   const { children } = props;
 
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;

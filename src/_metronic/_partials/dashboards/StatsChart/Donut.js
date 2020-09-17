@@ -1,5 +1,6 @@
 import React from "react";
 import Chart from "react-apexcharts";
+import { connect } from 'react-redux';
 
 class Pie extends React.Component {
     state = {
@@ -28,7 +29,7 @@ class Pie extends React.Component {
                 "#1F6FD0",
                 "#FFC600"
             ],
-            labels: ["Delivered", "Pending", "Cancelled", "Return", "Dispatch"],
+            labels: ["Total Users", "Total Couriers", "Total Shipments"],
             legend: {
                 position: "bottom",
                 onItemClick: {
@@ -40,17 +41,22 @@ class Pie extends React.Component {
     };
 
     render() {
+        const users = this.props.data.totalUsers || 0
+        const couriers = this.props.data.totalCouriers || 0
+        const shipments = this.props.data.totalShippments || 0
+        const series = [users, couriers, shipments]
+        console.log("series is ", series)
         return (
             <div className="Chart">
                 <a
                     href="#"
                     className="text-dark-75 text-hover-primary font-weight-bolder font-size-h5"
                 >
-                    Couriers Graph
+                    Stats Graph
             </a>
                 <Chart
                     options={this.state.options}
-                    series={this.state.series}
+                    series={series}
                     type="donut"
                     width="100%"
                 />
@@ -59,4 +65,9 @@ class Pie extends React.Component {
     }
 }
 
-export default Pie;
+const mapStateToProps = (state) => {
+    return {
+        data: state.user.all
+    }
+}
+export default connect(mapStateToProps, null)(Pie);
